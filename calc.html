@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Captcha Autofill</title>
+    <link rel="stylesheet" href="calc.css">
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css">
+    <!-- ionic icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- adding jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <p>RITIK'S CALCULATOR</p>
+    <div class="calculator">
+       
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button  onclick="clearDisplay()">c</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('*')">*</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('/')">/</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('%')">%</button>
+      <button onclick="appendToDisplay('.')">.</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      
+      
+      
+     
+      <button onclick="appendToDisplay('//')">//</button>
+      <button onclick="appendToDisplay('**')">**</button>
+       
+       
+      
+    </div>
+  </div>
+<script>
+    function appendToDisplay(value) {
+  document.getElementById('display').value += value;
+}
 
+function clearDisplay() {
+  document.getElementById('display').value = '';
+}
+
+function calculate() {
+  try {
+    let result = eval(document.getElementById('display').value);
+    document.getElementById('display').value = result;
+  } catch (error) {
+    document.getElementById('display').value = 'Error';
+  }
+}
+const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    audio.play();
+  });
+});
+
+</script>
+</body>
+</html>
