@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    overflow: hiden;
+}
+body {
+    display: grid;
+    place-items:center ;
+    background: #52B3EA;
+    height: 100vh;
+    width: 100vw;
+}
+p{
+   position: absolute;
+   top: 20px;
+   font-size: 35px;
+   color: #e0e0e0;
+   text-shadow: 5px 5px 15px #3a7fa6,
+             -5px -5px 15px #6ae7ff;
+   caret-color:#;
+   outline: none;
+}
+.calculator{
+    width: 320px;
+    height: 580px;
+    border-radius: 30px;
+    background: #52B3EA;
+    box-shadow:  12px 12px 34px #3f8ab4,
+             -12px -12px 34px #65dcff;
+    display: grid;
+    place-items:center ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 8px;
+}
+input{
+    width: 250px;
+    height: 60px;
+    outline:none;
+    border-radius: 12px;
+    background: #52B3EA;
+    box-shadow: inset 9px 9px 19px #489ece,
+            inset -9px -9px 19px #5cc8ff;
+    border: none;
+    margin-top: 50px;
+    padding-left: 20px;
+    font-size:20px;
+    color: #e0e0e0;
+    margin-top: 80px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 300px;
+    height: 400px;
+    place-items: center;
+    margin-top: 80px;
+}
+
+button{
+    width: 60px;
+    height: 60px;
+    background: #121212;
+    border-radius: 5px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #58c0fa, #4aa1d3);
+    box-shadow:  8px 8px 16px #418db9,
+             -8px -8px 16px #63d9ff;
+    color: #e0e0e0;
+    font-size: 16px;
+}
+button:active{
+    border-radius: 10px;
+    background: linear-gradient(145deg, #4aa1d3, #58c0fa);
+    box-shadow:  8px 8px 16px #418db9,
+             -8px -8px 16px #63d9ff;
+}
